@@ -1196,7 +1196,7 @@ blockquote {
     background: rgba(0, 0, 0, .6)
 }
 .Intro--single-photo {
-    background: url(../images/intro3.jpg) no-repeat fixed 50% 50%/cover;
+    background: url("../images/intro3.jpg") no-repeat fixed 50% 50%/cover;
     display: flex;
     justify-content: center;
     align-items: center;
