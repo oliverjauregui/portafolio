@@ -13,17 +13,3 @@ app.listen(port, function() {
 	console.log('app running')
 })
 
-//////////////////////////////////
-
-router.get("/", function(req, res){
-    const host = req.hostname;
-    if(host === "oliverjauregui.herokuapp.com"){
-        res.redirect(301, "http://www.oliverjauregui.com/");
-    } else{
-        res.render("http://www.oliverjauregui.com/");
-    }
-});
-
-app.use(function(req, res, next) {
-	res.status(404).render("/assets/js/libs.html");
-});
