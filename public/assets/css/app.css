@@ -2382,6 +2382,7 @@ footer .footer-socials a {
 
 @-moz-document url-prefix() {
     .Intro--single-photo{
+        background: url("../images/intro.jpg") no-repeat fixed 50% 50%/cover;
         justify-content: inherit;
         align-items: inherit;
     }

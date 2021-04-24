@@ -1,0 +1,7 @@
+User-Agent: *
+Disallow: 
+Disallow: /project-cine.html
+Disallow: /project-oracliom.html
+Disallow: /project-patitas.html
+
+Sitemap: http://www.oliverjauregui.com/sitemap.xml
