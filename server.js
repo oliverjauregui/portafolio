@@ -14,5 +14,5 @@ app.listen(port, function() {
 })
 
 app.get("*", (req, res) => {
-	res.sendfile(__dirname + "/public/missing-page.html")
+	res.sendfile(__dirname + "/public/404.html")
 });
