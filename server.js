@@ -12,3 +12,7 @@ app.get('/', function(req, res) {
 app.listen(port, function() {
 	console.log('app running')
 })
+
+app.use(function(req, res, next) {
+	res.status(404).render("public/assets/js/404.html");
+});
