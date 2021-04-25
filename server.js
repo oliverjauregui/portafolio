@@ -13,11 +13,6 @@ app.listen(port, function() {
 	console.log('app running')
 })
 
-app.get('/', function(request, response, next) {
-	if(request.headers.host =="https://oliverjauregui.com/") {
-		response.writeHead(301, {'Location':'https://www.oliverjauregui.com/'+ request.url, 'Expires': (new Date).toGMTString()});
-		response.end();
-	}
-	else{
-		next();
-	}})
+app.get("*", (req, res) => {
+	res.sendfile(__dirname + "/public/missing-page.html")
+});
