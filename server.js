@@ -13,6 +13,11 @@ app.listen(port, function() {
 	console.log('app running')
 })
 
-app.use(function(req, res, next) {
-	res.status(404).render("public/assets/js/404.html");
-});
+app.get('/', function(request, response, next) {
+	if(request.headers.host =="https://oliverjauregui.com/") {
+		response.writeHead(301, {'Location':'https://www.oliverjauregui.com/'+ request.url, 'Expires': (new Date).toGMTString()});
+		response.end();
+	}
+	else{
+		next();
+	}})
